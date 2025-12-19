@@ -90,7 +90,7 @@ const BentoLayout = () => {
       id: 'case1',
       type: 'case-study',
       className: 'md:col-span-1 md:row-span-2',
-      image: '/img/finetuning.png',
+      image: '/finetuning.png',
       gradient: 'from-primary-300 to-primary-400',
       content: {
         title: 'ML Model Optimization',
@@ -105,7 +105,7 @@ const BentoLayout = () => {
       id: 'case2',
       type: 'case-study',
       className: 'md:col-span-1 md:row-span-2',
-      image: '/img/llmhal.png',
+      image: '/llmhal.png',
       gradient: 'from-beige-300 to-beige-400',
       content: {
         title: 'AI Trust & Safety',
@@ -120,7 +120,7 @@ const BentoLayout = () => {
       id: 'case3',
       type: 'case-study',
       className: 'md:col-span-1 md:row-span-2',
-      image: '/img/hello.png',
+      image: '/hello.png',
       gradient: 'from-primary-300 to-primary-400',
       content: {
         title: 'ML Infrastructure',
@@ -140,7 +140,7 @@ const BentoLayout = () => {
       content: {
         title: 'Resume',
         value: 'View CV',
-        link: '/files/cv.pdf'
+        link: '/cv.pdf'
       }
     },
     // Quote Card - Wide
