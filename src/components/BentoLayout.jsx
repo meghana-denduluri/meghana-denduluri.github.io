@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MapPin, FileText, Award, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPin, FileText, Award, ExternalLink, GraduationCap } from 'lucide-react'
 
 const BentoLayout = () => {
   const getGradientStyle = (gradient) => {
@@ -13,7 +13,7 @@ const BentoLayout = () => {
   }
 
   const rightCards = [
-    // Currently Building Tile
+    // Currently Building Tile - Small utility
     {
       id: 'currently-building',
       type: 'building',
@@ -23,18 +23,18 @@ const BentoLayout = () => {
         link: '#fincopilot'
       }
     },
-    // FincopilotX Tile - Large (next to Currently Building)
+    // FincopilotX Tile - PRIMARY ANCHOR (largest)
     {
       id: 'fincopilot',
       type: 'project',
-      className: 'md:col-span-2 md:row-span-2',
+      className: 'md:col-span-2 md:row-span-3',
       content: {
         title: 'FinCopilotX — Your AI Finance Command Center',
         description: 'A Gen-AI powered finance co-pilot that helps businesses forecast, optimize cash flow, and make smarter financial decisions—directly from their ERP data.',
         link: 'https://www.fincopilotx.ai/'
       }
     },
-    // Location Card - Smaller
+    // Location Card - Tertiary utility
     {
       id: 'location',
       type: 'location',
@@ -46,7 +46,7 @@ const BentoLayout = () => {
         link: 'https://www.google.com/maps/place/Hyderabad,+India'
       }
     },
-    // LinkedIn Card - Wide
+    // LinkedIn Card - Secondary wide
     {
       id: 'linkedin',
       type: 'social',
@@ -59,7 +59,7 @@ const BentoLayout = () => {
         link: 'https://www.linkedin.com/in/denduluri-meghana/'
       }
     },
-    // GitHub Card - Small
+    // GitHub Card - Tertiary compact
     {
       id: 'github',
       type: 'social',
@@ -72,7 +72,7 @@ const BentoLayout = () => {
         link: 'https://github.com/meghana-denduluri'
       }
     },
-    // Email Card - Small
+    // Email Card - Tertiary compact
     {
       id: 'email',
       type: 'social',
@@ -85,11 +85,24 @@ const BentoLayout = () => {
         link: 'mailto:dmeghana18@gmail.com'
       }
     },
-    // Case Study 1 - Tall
+    // Education Card - Secondary wide
+    {
+      id: 'education',
+      type: 'education',
+      className: 'md:col-span-2 md:row-span-1',
+      icon: GraduationCap,
+      gradient: 'from-beige-300 to-beige-400',
+      content: {
+        degree: "Master's in Computer Science",
+        university: 'University of Pennsylvania',
+        gpa: '3.61'
+      }
+    },
+    // Case Study 1 - SECONDARY ANCHOR (tall)
     {
       id: 'case1',
       type: 'case-study',
-      className: 'md:col-span-1 md:row-span-2',
+      className: 'md:col-span-1 md:row-span-3',
       image: '/finetuning.png',
       gradient: 'from-primary-300 to-primary-400',
       content: {
@@ -100,7 +113,7 @@ const BentoLayout = () => {
         link: 'https://meghcodes.notion.site/meghcodes/Retrieval-augmented-generation-v-s-fine-tuning-237b069a66e74c78b89386696e3e8e99'
       }
     },
-    // Case Study 2 - Tall
+    // Case Study 2 - Secondary tall (different height)
     {
       id: 'case2',
       type: 'case-study',
@@ -115,7 +128,7 @@ const BentoLayout = () => {
         link: 'https://meghcodes.notion.site/Mitigating-Hallucinations-in-LLMs-Chain-of-Verification-CoVe-7f53dffe58024656857b7cecd74fa443?pvs=4'
       }
     },
-    // Case Study 3 - Tall
+    // Case Study 3 - Secondary medium tall
     {
       id: 'case3',
       type: 'case-study',
@@ -130,7 +143,7 @@ const BentoLayout = () => {
         link: 'https://meghcodes.notion.site/Vector-Databases-6453b69dc6644d649fe4f79d5ac09099?pvs=4'
       }
     },
-    // Resume Card - Small
+    // Resume Card - Tertiary utility
     {
       id: 'resume',
       type: 'link',
@@ -143,7 +156,7 @@ const BentoLayout = () => {
         link: '/cv.pdf'
       }
     },
-    // Quote Card - Wide
+    // Quote Card - Full width visual break
     {
       id: 'philosophy',
       type: 'quote',
@@ -154,7 +167,7 @@ const BentoLayout = () => {
         author: 'My Product Philosophy'
       }
     },
-    // Research Interests Header
+    // Research Interests Header - Wide secondary
     {
       id: 'research-header',
       type: 'section-header',
@@ -166,7 +179,7 @@ const BentoLayout = () => {
         link: '#research'
       }
     },
-    // Research Interest 1
+    // Research Interest 1 - Tertiary compact
     {
       id: 'research1',
       type: 'research',
@@ -175,7 +188,7 @@ const BentoLayout = () => {
         title: 'Responsible & Safe AI'
       }
     },
-    // Research Interest 2
+    // Research Interest 2 - Tertiary compact
     {
       id: 'research2',
       type: 'research',
@@ -184,7 +197,7 @@ const BentoLayout = () => {
         title: 'Explainable / Interpretable Machine Learning'
       }
     },
-    // Research Interest 3
+    // Research Interest 3 - Tertiary compact
     {
       id: 'research3',
       type: 'research',
@@ -193,7 +206,7 @@ const BentoLayout = () => {
         title: 'Human-Centered & Stakeholder-Aware AI'
       }
     },
-    // Research Interest 4
+    // Research Interest 4 - Tertiary compact
     {
       id: 'research4',
       type: 'research',
@@ -279,6 +292,32 @@ const BentoLayout = () => {
               className="absolute top-6 right-6 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" 
             />
           </motion.a>
+        )
+
+      case 'education':
+        const EduIcon = card.icon
+        return (
+          <motion.div
+            key={card.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={`${baseClasses} ${card.className} p-6 min-h-[140px] flex flex-col justify-between`}
+            style={{ background: getGradientStyle(card.gradient) }}
+          >
+            <EduIcon size={32} className="text-gray-900" />
+            <div>
+              <p className="text-sm font-medium text-gray-700 mb-1">
+                {card.content.degree}
+              </p>
+              <p className="font-bold text-lg text-gray-900 mb-1">
+                {card.content.university}
+              </p>
+              <p className="text-sm font-semibold text-gray-800">
+                GPA: {card.content.gpa}
+              </p>
+            </div>
+          </motion.div>
         )
 
       case 'social':
