@@ -108,8 +108,6 @@ const BentoLayout = () => {
       content: {
         title: 'ML Model Optimization',
         subtitle: 'RAG vs Fine-Tuning Framework',
-        metric: '60%',
-        metricLabel: 'Faster Decisions',
         link: 'https://meghcodes.notion.site/meghcodes/Retrieval-augmented-generation-v-s-fine-tuning-237b069a66e74c78b89386696e3e8e99'
       }
     },
@@ -123,8 +121,6 @@ const BentoLayout = () => {
       content: {
         title: 'AI Trust & Safety',
         subtitle: 'Chain of Verification',
-        metric: '40%',
-        metricLabel: 'Less Hallucinations',
         link: 'https://meghcodes.notion.site/Mitigating-Hallucinations-in-LLMs-Chain-of-Verification-CoVe-7f53dffe58024656857b7cecd74fa443?pvs=4'
       }
     },
@@ -138,8 +134,6 @@ const BentoLayout = () => {
       content: {
         title: 'ML Infrastructure',
         subtitle: 'Vector Database Platform',
-        metric: '70%',
-        metricLabel: 'Faster Queries',
         link: 'https://meghcodes.notion.site/Vector-Databases-6453b69dc6644d649fe4f79d5ac09099?pvs=4'
       }
     },
@@ -420,12 +414,6 @@ const BentoLayout = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 inline-block">
-                  <div className="text-2xl font-bold text-gray-900">{card.content.metric}</div>
-                  <div className="text-xs text-gray-600">{card.content.metricLabel}</div>
-                </div>
-              </div>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
